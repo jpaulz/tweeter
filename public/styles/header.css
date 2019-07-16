@@ -1,0 +1,17 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-color: #ff9900;
+  background-image: url("../images/concrete-wall-2.png");
+}
+
+header img {
+  display: block;
+  margin: 90px auto 0 auto;
+}
+
+header h2 {
+  text-align: center;
+  margin-top: 0px;
+  color: white;
+}
