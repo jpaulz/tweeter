@@ -1,0 +1,25 @@
+form textarea {
+  color: rgb(65, 63, 63);
+  background: transparent;
+  border: 0;
+  border-bottom: 5px solid rgb(65, 63, 63);
+  width: 100%;
+}
+
+form textarea::placeholder {
+  font-weight: bold;
+  color: rgb(65, 63, 63);
+}
+
+form input {
+  background-color: #4056A1;
+  color: white;
+  font-family: 'Bungee', cursive;
+}
+
+.counter {
+  color: rgb(65, 63, 63);
+  font-family: 'Bungee', cursive;
+  float: right;
+
+}
