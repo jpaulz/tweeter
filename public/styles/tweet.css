@@ -1,0 +1,65 @@
+.tweet {
+  border: 5px solid  rgb(65, 63, 63);
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 20px;
+} 
+
+.tweet:hover {
+  box-shadow: 10px 10px 4px 2px rgb(209, 209, 226);
+}
+
+.tweet header {
+  padding: 10px;
+  height: 100px;
+}
+
+.tweet header img {
+  width: 60px;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.tweet header .username {
+  float: right;
+  opacity: 0;
+  color: rgb(184, 184, 221);
+}
+
+.tweet:hover header .username {
+  opacity: 1;
+}
+
+.tweet .tweet-content {
+  border-bottom: 5px solid  rgb(65, 63, 63);
+  padding: 10px 10px 30px;
+}
+
+.tweet footer {
+  padding: 10px;
+}
+
+.tweet footer .date {
+  font-size: 14px;
+}
+
+.tweet footer .tweet-actions {
+  float: right;
+  font-size: 16px;
+  color: rgb(62, 62, 219);
+}
+
+.tweet .name {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+  line-height: 80px;
+}
+
+.tweet .profile-image {
+  background-image: url("https://i.imgur.com/z5LNkkB.png");
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  background-size: cover;
+}
