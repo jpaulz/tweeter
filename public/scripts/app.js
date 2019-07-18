@@ -39,8 +39,11 @@ $(()=> {
   };
 
   $("#create-new-tweet").submit(function(event) {
-    console.log("Handler for .submit() called.");
+    // console.log("Handler for .submit() called.");
     event.preventDefault();
+    $.post("/tweets", $(this).serialize(), (data, status) =>  {
+    });
+    console.log($(this).serialize());
   });
   
   
