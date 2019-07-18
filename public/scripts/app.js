@@ -56,7 +56,7 @@ $(()=> {
     console.log("thing", $("#create-new-tweet textarea").val());
     if ($("#create-new-tweet textarea").val().length <= 0) {
       alert("Your tweet is empty!");
-    } else if ($("#create-new-tweet textarea").val().length >= 140) {
+    } else if ($("#create-new-tweet textarea").val().length > 140) {
       alert("Your tweet is too loooong!");
     } else {
       event.preventDefault();

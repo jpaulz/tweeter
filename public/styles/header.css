@@ -15,3 +15,12 @@
   margin-top: 0px;
   color: white;
 }
+
+.logo {
+  float: left;
+}
+.CTA {
+  float: right;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
