@@ -38,53 +38,31 @@ $(()=> {
     return $article;
   };
 
-  $("#create-new-tweet").submit(function(event) {
-    // console.log("Handler for .submit() called.");
-    event.preventDefault();
-    $.post("/tweets", $(this).serialize(), (data, status) =>  {
-    });
-    console.log($(this).serialize());
-  });
-  
-  
   const tweetData = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
   ];
-
-
   
-  // const $tweet = createTweetElement(tweetData);
   
-  // Test / driver code (temporary)
-  // console.log($tweet); // to see what it looks like
- 
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
+      
       const $article = createTweetElement(tweet);
       $("#all-tweets").append($article);
     }
   };
   renderTweets(tweetData);
-});
 
+
+  $("#create-new-tweet").submit(function(event) {
+    event.preventDefault();
+    $.post("/tweets", $(this).serialize(), (data, status) =>  {
+    });
+    console.log($(this).serialize());
+  });
+
+  const loadTweets = function() {
+    $.ajax("/tweets", {method: "GET"})
+      .then(renderTweets);
+  };
+  loadTweets();
+
+});
