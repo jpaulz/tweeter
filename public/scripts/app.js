@@ -51,13 +51,21 @@ $(()=> {
   };
   renderTweets(tweetData);
 
-
   $("#create-new-tweet").submit(function(event) {
     event.preventDefault();
-    $.post("/tweets", $(this).serialize(), (data, status) =>  {
-    });
-    console.log($(this).serialize());
+    console.log("thing", $("#create-new-tweet textarea").val());
+    if ($("#create-new-tweet textarea").val().length <= 0) {
+      alert("Your tweet is empty!");
+    } else if ($("#create-new-tweet textarea").val().length >= 140) {
+      alert("Your tweet is too loooong!");
+    } else {
+      event.preventDefault();
+      $.post("/tweets", $(this).serialize(), (data, status) =>  {
+      });
+      console.log($(this).serialize());
+    }
   });
+
 
   const loadTweets = function() {
     $.ajax("/tweets", {method: "GET"})
