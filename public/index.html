@@ -14,11 +14,14 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+   
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -28,7 +31,7 @@
       <span>tweeter</span>
     </nav>
 
-    <header>
+    <header class="site-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -42,13 +45,37 @@
     <main class="container">
         <section class="new-tweet">
             <h2>Compose Tweet</h2>
-            <form action="/tweets" method=>
+            <form id="create-new-tweet" action="/tweets" method="POST">
               <textarea name="text" placeholder="What are you humming about?"></textarea>
               <input type="submit" value="Tweet">
               <span class="counter">140</span>
             </form>
           </section>
+          
+          <section id="all-tweets">
+          <!-- <article class="tweet">
+            <header>
+              <div class="profile-image"></div>
+              <p class="name">Newton</p>
+              <span class="username">@SirIsaac</span>
+            </header>
+            <div class="tweet-content">
+              If I have seen further it is by standing on the shoulders of giants
+            </div>
+            <footer>
+              <span class="date">10 days ago</span>
+              <div class="tweet-actions">
+                <a>&#9873</a>
+                <a>&#9850</a>
+                <a>&#10084</a>
+              </div>
+              
+            </footer>
+          </article> -->
+          </section>
     </main>
+   
+  
 
   </body>
 </html>
