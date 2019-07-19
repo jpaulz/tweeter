@@ -68,12 +68,15 @@ $(()=> {
     }
   });
 
-
   const loadTweets = function() {
 
     $.ajax("/tweets", {method: "GET"})
       .then(renderTweets);
   };
   loadTweets();
+
+  $(".arrow-button").click(function() {
+    $(".new-tweet").slideToggle("slow");
+  });
 
 });
