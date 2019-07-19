@@ -4,8 +4,6 @@ $(()=> {
     const $header = $("<header>");
     $article.append($header);
 
-    
-    // $("<div>") $("<img>")
     const $div = $("<div>").addClass("profile-image");
     const $img = $("<img>").attr("src", tweet.user.avatars);
     $div.append($img);
@@ -23,7 +21,7 @@ $(()=> {
     const $footer = $("<footer>");
     $article.append($footer);
 
-    const $span1 = $("<span>").addClass("date").text(new Date(tweet.created_at));
+    const $span1 = $("<span>").addClass("date").text(moment(tweet.created_at).fromNow());
     $footer.append($span1);
 
     const $div2 = $("<div>").addClass("tweet-actions");
@@ -42,9 +40,7 @@ $(()=> {
     return $article;
   };
 
-  const tweetData = [
-  ];
-  
+  const tweetData = [];
   
   const renderTweets = function(tweets) {
     $("#all-tweets").empty();
@@ -67,6 +63,7 @@ $(()=> {
       toggleError("hide");
       $.post("/tweets", $(this).serialize(), (data, status) =>  {
         $("#create-new-tweet textarea").val("");
+        $(".counter").text("140");
         loadTweets();
       });
       console.log($(this).serialize());
@@ -74,7 +71,6 @@ $(()=> {
   });
 
   const loadTweets = function() {
-
     $.ajax("/tweets", {method: "GET"})
       .then(renderTweets);
   };
