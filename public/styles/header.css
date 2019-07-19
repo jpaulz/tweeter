@@ -19,8 +19,23 @@
 .logo {
   float: left;
 }
-.CTA {
+.container-for-tweet {
   float: right;
-  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  position: relative;
+  top: -18px;
 }
-
+.CTA {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 17px;
+}
+.arrow-button {
+  color: rgb(3, 7, 224);
+  font-size: 35px;
+  
+}
+.arrow-button:hover {
+  color: #ff9900;
+  position: relative;
+  top: -5px;
+}
