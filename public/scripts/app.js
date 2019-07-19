@@ -19,7 +19,7 @@ $(()=> {
     const $footer = $("<footer>");
     $article.append($footer);
 
-    const $span1 = $("<span>").addClass("date").text(tweet.created_at);
+    const $span1 = $("<span>").addClass("date").text(new Date(tweet.created_at));
     $footer.append($span1);
 
     const $div2 = $("<div>").addClass("tweet-actions");

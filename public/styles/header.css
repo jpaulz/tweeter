@@ -39,3 +39,12 @@
   position: relative;
   top: -5px;
 }
+@media only screen and (min-width: 1024px) {
+  .site-header {
+    float: left;
+    width: 28%;
+    height: 450px;
+    margin: 3%;
+    margin-top: 12.5%;
+  }
+}
