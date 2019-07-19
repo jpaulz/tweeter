@@ -43,8 +43,8 @@ $(()=> {
   
   
   const renderTweets = function(tweets) {
+    $("#all-tweets").empty();
     for (let tweet of tweets) {
-      
       const $article = createTweetElement(tweet);
       $("#all-tweets").append($article);
     }
@@ -61,7 +61,7 @@ $(()=> {
     } else {
       event.preventDefault();
       $.post("/tweets", $(this).serialize(), (data, status) =>  {
-        $("#all-tweets").empty();
+        $("#create-new-tweet textarea").val("");
         loadTweets();
       });
       console.log($(this).serialize());
