@@ -55,11 +55,12 @@ $(()=> {
     event.preventDefault();
     console.log("thing", $("#create-new-tweet textarea").val());
     if ($("#create-new-tweet textarea").val().length <= 0) {
-      alert("Your tweet is empty!");
+      toggleError("show");
     } else if ($("#create-new-tweet textarea").val().length > 140) {
-      alert("Your tweet is too loooong!");
+      toggleError("show");
     } else {
       event.preventDefault();
+      toggleError("hide");
       $.post("/tweets", $(this).serialize(), (data, status) =>  {
         $("#create-new-tweet textarea").val("");
         loadTweets();
@@ -79,4 +80,14 @@ $(()=> {
     $(".new-tweet").slideToggle("slow");
   });
 
+  const toggleError = function(toggle) {
+    if (toggle === "show") {
+      $(".isa_error").slideDown("slow");
+    } else {
+      $(".isa_error").hide();
+    }
+  };
+  toggleError("hide");
 });
+
+
