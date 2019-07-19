@@ -46,7 +46,7 @@ $(()=> {
     $("#all-tweets").empty();
     for (let tweet of tweets) {
       const $article = createTweetElement(tweet);
-      $("#all-tweets").append($article);
+      $("#all-tweets").prepend($article);
     }
   };
   renderTweets(tweetData);
