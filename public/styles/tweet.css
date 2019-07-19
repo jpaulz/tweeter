@@ -46,7 +46,7 @@
 .tweet footer .tweet-actions {
   float: right;
   font-size: 16px;
-  color: rgb(62, 62, 219);
+  color: rgb(65, 63, 63);
 }
 
 .tweet .name {
@@ -54,10 +54,11 @@
   margin: 0;
   vertical-align: top;
   line-height: 80px;
+  padding-left: 15px;
 }
 
 .tweet .profile-image {
-  background-image: url("https://i.imgur.com/z5LNkkB.png");
+  /* background-image: url("https://i.imgur.com/z5LNkkB.png"); */
   height: 50px;
   width: 50px;
   display: inline-block;

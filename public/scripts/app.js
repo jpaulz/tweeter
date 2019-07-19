@@ -3,8 +3,12 @@ $(()=> {
     const $article = $("<article>").addClass("tweet");
     const $header = $("<header>");
     $article.append($header);
+
     
+    // $("<div>") $("<img>")
     const $div = $("<div>").addClass("profile-image");
+    const $img = $("<img>").attr("src", tweet.user.avatars);
+    $div.append($img);
     $header.append($div);
 
     const $p = $("<p>").addClass("name").text(tweet.user.name);

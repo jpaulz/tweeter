@@ -14,6 +14,7 @@
   text-align: center;
   margin-top: 0px;
   color: white;
+  font-weight: normal
 }
 
 .logo {
@@ -30,12 +31,12 @@
   font-size: 17px;
 }
 .arrow-button {
-  color: rgb(3, 7, 224);
+  color: rgb(59, 61, 160);
   font-size: 35px;
   
 }
 .arrow-button:hover {
-  color: #ff9900;
+  color: #be520a;
   position: relative;
   top: -5px;
 }
