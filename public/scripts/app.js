@@ -61,6 +61,8 @@ $(()=> {
     } else {
       event.preventDefault();
       $.post("/tweets", $(this).serialize(), (data, status) =>  {
+        $("#all-tweets").empty();
+        loadTweets();
       });
       console.log($(this).serialize());
     }
@@ -68,6 +70,7 @@ $(()=> {
 
 
   const loadTweets = function() {
+
     $.ajax("/tweets", {method: "GET"})
       .then(renderTweets);
   };
