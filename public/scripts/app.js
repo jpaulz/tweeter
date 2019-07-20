@@ -42,6 +42,7 @@ $(()=> {
 
   const tweetData = [];
   
+
   const renderTweets = function(tweets) {
     $("#all-tweets").empty();
     for (let tweet of tweets) {
@@ -51,9 +52,9 @@ $(()=> {
   };
   renderTweets(tweetData);
 
+
   $("#create-new-tweet").submit(function(event) {
     event.preventDefault();
-    console.log("thing", $("#create-new-tweet textarea").val());
     if ($("#create-new-tweet textarea").val().length <= 0) {
       $(".isa_error").text("Oops your tweet is too short!");
       toggleError("show");
@@ -68,9 +69,9 @@ $(()=> {
         $(".counter").text("140");
         loadTweets();
       });
-      console.log($(this).serialize());
     }
   });
+
 
   const loadTweets = function() {
     $.ajax("/tweets", {method: "GET"})
@@ -78,10 +79,12 @@ $(()=> {
   };
   loadTweets();
 
+
   $(".arrow-button").click(function() {
     $(".new-tweet").slideToggle("slow");
   });
 
+  
   const toggleError = function(toggle) {
     if (toggle === "show") {
       $(".isa_error").slideDown("slow");

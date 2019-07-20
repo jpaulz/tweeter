@@ -37,37 +37,32 @@
     </nav>
     
        
-    <header class="site-header">
+  <header class="site-header">
       <div>
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png"> 
       </div>
-      <br>
-      <div>
+       <div>
           <h2>
             <span id="first-name"><strong>Julia</strong>Paulasaari</span>
           </h2>
-      </div>
+       </div>
   </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <div class="isa_error">
-            <i class="fa fa-times-circle"></i>
-            Incorrect input.
-         </div>
-        <section class="new-tweet">
-            
-            <h2>Compose Tweet</h2>
-            <form id="create-new-tweet" action="/tweets" method="POST">
-              <textarea name="text" placeholder="What are you humming about?"></textarea>
-              <input type="submit" value="Tweet">
-              <span class="counter">140</span>
-            </form>
-          </section>
-          
-          <section id="all-tweets">
-        
-          </section>
+      <div class="isa_error">
+        <i class="fa fa-times-circle"></i>
+          Incorrect input.
+      </div>
+     <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+          <form id="create-new-tweet" action="/tweets" method="POST">
+            <textarea name="text" placeholder="What are you humming about?"></textarea>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </form>
+     </section>    
+     <section id="all-tweets"></section>
     </main>
    
   </body>

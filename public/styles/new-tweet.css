@@ -3,15 +3,18 @@
   margin: 10px 0px;
   padding:12px;
   }
+
 .isa_error {
   color: rgb(190, 25, 33);
   background-color: #FFD2D2;
   }
+
 .isa_error i {
   margin:10px 22px;
   font-size:2em;
   vertical-align: middle;
   }
+
 form textarea {
   color: rgb(65, 63, 63);
   background: transparent;
@@ -36,5 +39,4 @@ form input {
   color: rgb(65, 63, 63);
   font-family: 'Bungee', cursive;
   float: right;
-
 }

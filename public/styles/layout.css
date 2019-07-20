@@ -35,10 +35,8 @@ body {
   .container {
     width: 65%; 
     float: right;
-    
     padding-left: 5%;
     padding-right: 10%;
     margin-top: 10%;
   }
- 
 }

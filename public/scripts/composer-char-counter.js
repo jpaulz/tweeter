@@ -8,7 +8,6 @@ $(document).ready(function() {
       $(".counter").css("color", "#ed2a07");
     } else {
       $(".counter").css("color", "#545149");
-
     }
   });
 });

@@ -20,26 +20,30 @@
 .logo {
   float: left;
 }
+
 .container-for-tweet {
   float: right;
   text-align: center;
   position: relative;
   top: -18px;
 }
+
 .CTA {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 17px;
 }
+
 .arrow-button {
   color: #be520a;
-  font-size: 35px;
-  
+  font-size: 35px; 
 }
+
 .arrow-button:hover {
   color: rgb(59, 61, 160); 
   position: relative;
   top: -5px;
 }
+
 @media only screen and (min-width: 1024px) {
   .site-header {
     float: left;
