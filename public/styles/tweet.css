@@ -33,6 +33,7 @@
 .tweet .tweet-content {
   border-bottom: 5px solid  rgb(65, 63, 63);
   padding: 10px 10px 30px;
+  word-wrap: break-word;
 }
 
 .tweet footer {
