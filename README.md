@@ -18,7 +18,7 @@ The app features:
 !["Screenshot of tweet's error message when tweet is over 140 characters](https://github.com/jpaulz/tweeter/blob/master/docs/tweet-error-msg-when-over-the-limit.png?raw=true)
 *Img. 3: Tweet's error message when tweet is over 140 characters*
 
-##Getting Started
+## Getting Started
 - Install dependencies using the `npm install` command.
 - Start the web server using the `npm run local` command. The app will be served at http://localhost:8080/.
 - Go to http://localhost:8080/ in your browser.
