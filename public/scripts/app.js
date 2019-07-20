@@ -55,8 +55,10 @@ $(()=> {
     event.preventDefault();
     console.log("thing", $("#create-new-tweet textarea").val());
     if ($("#create-new-tweet textarea").val().length <= 0) {
+      $(".isa_error").text("Oops your tweet is too short!");
       toggleError("show");
     } else if ($("#create-new-tweet textarea").val().length > 140) {
+      $(".isa_error").text("Tweet is too long. Limit is 140 characters.");
       toggleError("show");
     } else {
       event.preventDefault();
