@@ -28,8 +28,8 @@ body {
    margin: 0 auto;
    background-color: #f4f1ec;
    padding-bottom: 50px;
-  
  }
+ 
  /* Tablet: minimum width of 768px to maximum width of 1024px */
  @media only screen and (min-width: 1024px) {
   .container {
